@@ -8,6 +8,8 @@ WorkoutWars::Application.routes.draw do
       resources :team_challenges
       resources :challenges
       resources :team_competitions
+      resources :users
+      devise_for :users
     end
   end
 

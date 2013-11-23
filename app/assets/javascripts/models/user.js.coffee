@@ -1,6 +1,7 @@
 WorkoutWars.User = DS.Model.extend
   name: DS.attr('string')
   nickname: DS.attr('string')
+  email: DS.attr('string')
   gender: DS.attr('string')
   address: DS.attr('string')
   phone: DS.attr('string')

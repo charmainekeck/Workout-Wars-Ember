@@ -1,0 +1,52 @@
+<div class="challenge-edit">
+  <h4>Challenge Settings</h4>
+  <hr>
+  <div class="form-group">
+    <label class= "col-sm-2 control-label">Name</label>
+    <div class="col-sm-10">
+      {{input value=name classNames="form-control"}}
+    </div>
+  </div>
+  <br />
+  <div class="form-group">
+    <label class= "col-sm-2 control-label">Start Date</label>
+    <div class="col-sm-10">
+      {{input value=startDate classNames="form-control date-field"}}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class= "col-sm-2 control-label">End Date</label>
+    <div class="col-sm-10">
+      {{input value=endDate classNames="form-control date-field"}}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class= "col-sm-2 control-label">Lower Level Restriction</label>
+    <div class="col-sm-10">
+      {{input value=lowerLevelRestriction classNames="form-control"}}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class= "col-sm-2 control-label">Upper Level Restriction</label>
+    <div class="col-sm-10">
+      {{input value=upperLevelRestriction classNames="form-control"}}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class= "col-sm-2 control-label">Max Participants</label>
+    <div class="col-sm-10">
+      {{input value=maxParticipants classNames="form-control"}}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input {{action "save"}} type="submit" class="btn btn-lg btn-block btn-success" value="Save" />
+    </div>
+  </div>
+</div>
+<div class="clearfix"></div>

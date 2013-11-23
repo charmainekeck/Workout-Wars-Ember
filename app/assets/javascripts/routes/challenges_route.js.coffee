@@ -1,4 +1,3 @@
-WorkoutWars.ChallengesRoute = Ember.Route.extend(
+WorkoutWars.ChallengesRoute = Ember.Route.extend
   model: ->
     WorkoutWars.Challenge.find()
-)

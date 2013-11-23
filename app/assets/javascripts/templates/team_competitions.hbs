@@ -1,18 +1,17 @@
-<div class="jumbotron">
-  <h1>Team Competitions</h1>
-  <p>Enter the relm of competitions to push you past any moments that you don't feel like pushing your body</p>
-  <p>Invite your friends to compete and see who the true champion is.</p>
-  <p>
-    <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-  </p>
+<h1>Team Competitions</h1>
+<hr>
+<div class="row">
+  <div class="col-md-3">
+    {{#linkTo "teamCompetitions.create" class="btn btn-success btn-block"}}New Team Competition{{/linkTo}}
+    <ul class="nav nav-pills nav-stacked">
+    {{#each controller}}
+      <li>{{#linkTo "teamCompetition" this}}{{name}}{{/linkTo}}</li>
+    {{else}}
+      <li>There are no team competitions.</li>
+    {{/each}}
+    </ul>
+  </div>
+  <div class="col-md-9">
+    {{outlet}}
+  </div>
 </div>
-
-<ul>
-  {{#each controller}}
-    <li>{{#linkTo "teamCompetition" this}}{{name}}{{/linkTo}}</li>
-  {{else}}
-    <li>There are no competitions.</li>
-  {{/each}}
-</ul>
-
-{{outlet}}

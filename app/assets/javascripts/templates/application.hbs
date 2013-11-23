@@ -1,0 +1,56 @@
+<!-- Fixed navbar -->
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        {{#linkTo "index" classNames="navbar-brand"}}WorkoutWars{{/linkTo}}
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li>{{#linkTo "index"}}Home{{/linkTo}}</li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Competitions <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-header">Competitions</li>
+              <li>{{#linkTo "teamCompetitions"}}Leaderboard{{/linkTo}}</li> 
+              <li class="divider"></li>
+              <li>{{#linkTo "competitions"}}Individual Competitions{{/linkTo}}</li>
+              <li>{{#linkTo "teamCompetitions"}}Team Competitions{{/linkTo}}</li>              
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Challenges <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-header">Challenges</li>
+              <li>{{#linkTo "teamCompetitions"}}Leaderboard{{/linkTo}}</li> 
+              <li class="divider"></li>
+              <li>{{#linkTo "competitions"}}Individual Challenges{{/linkTo}}</li>
+              <li>{{#linkTo "teamCompetitions"}}Team Challenges{{/linkTo}}</li>              
+            </ul>
+          </li>
+          <li>{{#linkTo "competitions"}}Contact{{/linkTo}}</li>          
+        </ul>
+        <form class="navbar-form navbar-right">
+          <div class="form-group">
+            <input type="text" placeholder="Email" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Password" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-success">Sign in</button>
+        </form>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+    <div class="container">
+      <br />
+      <br />
+      <br />
+      {{outlet}}
+    </div> <!-- /container -->

@@ -1,0 +1,18 @@
+<div class="jumbotron">
+  <h1>Competitions</h1>
+  <p>Enter the relm of competitions to push you past any moments that you don't feel like pushing your body</p>
+  <p>Invite your friends to compete and see who the true champion is.</p>
+  <p>
+    <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+  </p>
+</div>
+
+<ul>
+  {{#each controller}}
+    <li>{{#linkTo "competition" this}}{{name}}{{/linkTo}}</li>
+  {{else}}
+    <li>There are no competitions.</li>
+  {{/each}}
+</ul>
+
+{{outlet}}

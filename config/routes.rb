@@ -1,17 +1,15 @@
 WorkoutWars::Application.routes.draw do
-  resources :team_challenges
-
-  resources :challenges
-
-  resources :team_competitions
-
+  root to: "ember#start"
+  devise_for :users
+  
   namespace :api do
     namespace :v1 do
       resources :competitions
+      resources :team_challenges
+      resources :challenges
+      resources :team_competitions
     end
   end
-
-  root "ember#start"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

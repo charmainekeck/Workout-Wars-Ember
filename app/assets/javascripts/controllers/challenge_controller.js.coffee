@@ -8,6 +8,7 @@ WorkoutWars.ChallengeController = Ember.ObjectController.extend
     @set('deleteMode', false)  
     
   confirmDelete: ->
+    @set('deleteMode', false) 
     @get("model").deleteRecord()
     @get("model").save()
     @transitionToRoute "challenges"

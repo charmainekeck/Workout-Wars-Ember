@@ -2,10 +2,10 @@
 <hr>
 <div class="row">
   <div class="col-md-3">
-    {{#linkTo "team_challenges.create" class="btn btn-success btn-block"}}New Team Challenge{{/linkTo}}
+    {{#linkTo "teamChallenges.create" class="btn btn-success btn-block"}}New Team Challenge{{/linkTo}}
     <ul class="nav nav-pills nav-stacked">
     {{#each controller}}
-      <li>{{#linkTo "competition" this}}{{name}}{{/linkTo}}</li>
+      <li>{{#linkTo "teamChallenge" this}}{{name}}{{/linkTo}}</li>
     {{else}}
       <li>There are no team challenges.</li>
     {{/each}}

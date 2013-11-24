@@ -8,3 +8,4 @@
 #= require ./router
 #= require_self
 #= require bootstrap
+#= require jquery.ui.all

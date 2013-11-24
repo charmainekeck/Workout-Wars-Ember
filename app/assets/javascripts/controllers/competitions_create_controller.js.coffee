@@ -1,5 +1,5 @@
 WorkoutWars.CompetitionsCreateController = Ember.ObjectController.extend
-  save: ->    
+  saveCompetition: ->  
     @get('store').commit()
     transitionAfterSave: (->
       @transitionToRoute('competition', @get('content')) if @get('content.id')

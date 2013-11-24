@@ -4,4 +4,4 @@ WorkoutWars.TeamChallengesCreateRoute = Ember.Route.extend
 
   renderTemplate: ->
     @render "teamChallenge.edit",
-      controller: "teamChallengeCreate"
+      controller: "teamChallengesCreate"

@@ -1,5 +1,5 @@
 WorkoutWars.CompetitionEditController = Ember.ObjectController.extend
-  save: ->
+  saveCompetition: ->  
     competition = @get("model")
     competition.save()
     @transitionToRoute "competition", competition

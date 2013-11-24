@@ -1,4 +1,4 @@
-WorkoutWars.CompetitionsCreateRoute = Ember.Route.extend
+WorkoutWars.ChallengesCreateRoute = Ember.Route.extend
   model: ->
     WorkoutWars.Challenge.createRecord()
 

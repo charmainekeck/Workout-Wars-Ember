@@ -9,13 +9,21 @@ class Api::V1::TeamChallengesController < ApplicationController
     respond_with TeamChallenge.find(params[:id])
   end
 
-  def update
-    @team_challenge = TeamChallenge.find(params[:id])
-
-    if @team_challenge.update(team_challenge_params)
-      respond_with :no_content
+  def create
+    team_challenge = TeamChallenge.new(team_challenge_params)
+    if team_challenge.save
+      render json: team_challenge
     else
-      respond_with render json: @team_challenge.errors, status: :unprocessable_entity
+      render json: team_challenge, status: 422
+    end
+  end
+
+  def update
+    team_challenge = TeamChallenge.find(params[:id])
+    if team_challenge.update(team_challenge_params)
+      render json: team_challenge
+    else
+      render json: team_challenge, status: 422
     end
   end
 

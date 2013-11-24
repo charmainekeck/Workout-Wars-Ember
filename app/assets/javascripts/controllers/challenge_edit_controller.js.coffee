@@ -1,5 +1,5 @@
 WorkoutWars.ChallengeEditController = Ember.ObjectController.extend
-  save: ->
+  saveChallenge: ->
     challenge = @get("model")
     challenge.save()
     @transitionToRoute "challenge", challenge

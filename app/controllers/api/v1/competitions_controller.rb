@@ -10,27 +10,25 @@ class Api::V1::CompetitionsController < ApplicationController
   end
 
   def create
-    @competition = Competition.new(competition_params)
-
-    if @competition.save
-      respond_with :no_content
+    competition = Competition.new(competition_params)
+    if competition.save
+      render json: competition
     else
-      respond_with render json: @competition.errors, status: :unprocessable_entity
+      render json: competition, status: 422
     end
   end
 
   def update
-    @competition = Competition.find(params[:id])
-
-    if @competition.update(competition_params)
-      respond_with :no_content
+    competition = Competition.find(params[:id])
+    if competition.update(competition_params)
+      render json: competition
     else
-      respond_with render json: @competition.errors, status: :unprocessable_entity
+      render json: competition, status: 422
     end
   end
 
   def destroy
-    @competition = Competition.find(params[:id]).destroy
+    competition = Competition.find(params[:id]).destroy
     respond_with :no_content
   end
 

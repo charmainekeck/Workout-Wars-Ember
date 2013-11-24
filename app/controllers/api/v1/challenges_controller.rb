@@ -9,13 +9,21 @@ class Api::V1::ChallengesController < ApplicationController
     respond_with Challenge.find(params[:id])
   end
 
-  def update
-    @challenge = Challenge.find(params[:id])
-
-    if @challenge.update(challenge_params)
-      respond_with :no_content
+  def create
+    challenge = Challenge.new(challenge_params)
+    if challenge.save
+      render json: challenge
     else
-      respond_with render json: @challenge.errors, status: :unprocessable_entity
+      render json: challenge, status: 422
+    end
+  end
+
+  def update
+    challenge = Challenge.find(params[:id])
+    if challenge.update(challenge_params)
+      render json: challenge
+    else
+      render json: challenge, status: 422
     end
   end
 

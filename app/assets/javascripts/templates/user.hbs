@@ -1,10 +1,25 @@
-<h1>{{email}}</h1>
+<div class="row">
+  <h1>{{email}}</h1>
 
-<p>Name: {{name}}</p>
-<p>Nickname: {{nickname}}</p>
-<p>Age: {{age}}</p>
-<p>Height: {{height}}</p>
-<p>Weight: {{weight}}</p>
+  <div class="col-md-10">
+    <ul class="nav nav-pills">
+      <li>{{#linkTo "user.exercises"}}Exercises{{/linkTo}}</li>
+      <li>{{#linkTo "user.stats"}}Stats{{/linkTo}}</li>
+      <li>{{#linkTo "user.competitions"}}Competitions{{/linkTo}}</li>
+      <li>{{#linkTo "user.teamCompetitions"}}Team Competitions{{/linkTo}}</li>
+      <li>{{#linkTo "user.challenges"}}Challenges{{/linkTo}}</li>
+      <li>{{#linkTo "user.teamChallenges"}}Team Challenges{{/linkTo}}</li>
+      <li>{{#linkTo "user.edit"}}Settings{{/linkTo}}</li>
+    </ul>
 
-<button class="btn btn-default"{{action "edit"}}>Edit</button>
-{{outlet}}
+    {{outlet}}
+  </div>
+
+  <div class="col-md-2">
+    <p>Name: {{name}}</p>
+    <p>Nickname: {{nickname}}</p>
+    <p>Age: {{age}}</p>
+    <p>Height: {{height}}</p>
+    <p>Weight: {{weight}}</p>
+  </div>
+</div>

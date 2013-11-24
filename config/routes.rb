@@ -1,7 +1,13 @@
 WorkoutWars::Application.routes.draw do
-  root to: "ember#start"
   devise_for :users
+  unauthenticated do
+    root to: "static#index", as: :authenticated_root
+  end
   
+  authenticated :user do
+    root to: "ember#start", as: :unauthenticated_root
+  end
+    
   namespace :api do
     namespace :v1 do
       resources :competitions

@@ -1,10 +1,11 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
+
 Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
-  config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
+  config.mailer_sender = "no-reply@Workoutwarscomp.com"
 
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
@@ -92,7 +93,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = "c10bb0a855be20b09060a42d21642ab09de80724eec7866a8829ee6daec925006ae6adab949ebd77ace1510195397c75c4e79cb1a7fd8342b9a6c582b010e343"
+  # config.pepper = "05bebafa59462552c6b0eb482e376c2bcad2f3b62e5e02563088daaf7e2d97b98ec5bc61170ebc675f836b0145c9569999f0ab8678381f729f02c010514d38f5"
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -235,6 +236,10 @@ Devise.setup do |config|
   #   manager.intercept_401 = false
   #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
+
+  config.warden do |manager|
+    manager.failure_app = CustomFailure
+  end
 
   # ==> Mountable engine configurations
   # When using Devise inside an engine, let's call it `MyEngine`, and this engine

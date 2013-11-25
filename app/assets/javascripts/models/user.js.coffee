@@ -1,4 +1,5 @@
 WorkoutWars.User = DS.Model.extend
+  activities: DS.hasMany('WorkoutWars.Activity', { embedded: true }) 
   name: DS.attr('string')
   nickname: DS.attr('string')
   email: DS.attr('string')
@@ -10,3 +11,5 @@ WorkoutWars.User = DS.Model.extend
   age: DS.attr('number')
   level: DS.attr('number')
   xp_level: DS.attr('number')
+
+ 

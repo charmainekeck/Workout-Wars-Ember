@@ -1,8 +1,8 @@
 <h1>Competitions</h1>
+{{#linkTo "competitions.create" class="btn btn-lg btn-success btn-block"}}New Competition{{/linkTo}}
 <hr>
 <div class="row">
   <div class="col-md-3">
-    {{#linkTo "competitions.create" class="btn btn-success btn-block"}}New Competition{{/linkTo}}
     <ul class="nav nav-pills nav-stacked">
     {{#each controller}}
       <li>{{#linkTo "competition" this}}{{name}}{{/linkTo}}</li>

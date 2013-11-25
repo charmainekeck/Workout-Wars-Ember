@@ -1,8 +1,8 @@
 <h1>Challenges</h1>
+{{#linkTo "challenges.create" class="btn btn-lg btn-success btn-block"}}New Challenge{{/linkTo}}
 <hr>
 <div class="row">
   <div class="col-md-3">
-    {{#linkTo "challenges.create" class="btn btn-success btn-block"}}New Challenge{{/linkTo}}
     <ul class="nav nav-pills nav-stacked">
     {{#each controller}}
       <li>{{#linkTo "challenge" this}}{{name}}{{/linkTo}}</li>

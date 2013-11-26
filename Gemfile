@@ -11,7 +11,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem "ember-rails"
 gem "foreman"
-gem 'devise'
+gem 'devise', '~> 3.0.2'
 gem 'cancan'
 
 group :doc do

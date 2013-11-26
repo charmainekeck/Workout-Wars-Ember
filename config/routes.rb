@@ -15,6 +15,7 @@ WorkoutWars::Application.routes.draw do
       resources :challenges
       resources :team_competitions
       resources :users
+      resources :activities
       devise_for :users
     end
   end

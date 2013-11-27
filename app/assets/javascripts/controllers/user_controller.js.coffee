@@ -1,3 +1,9 @@
 WorkoutWars.UserController = Ember.ObjectController.extend
-  edit: ->
-    @transitionToRoute "user.edit"
+  needs: ['application']
+
+  isCurrentUser: ->
+    return false   
+  
+  actions:
+    edit: ->
+      @transitionToRoute "user.edit"

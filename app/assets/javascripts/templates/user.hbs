@@ -1,17 +1,26 @@
 <div class="row">
   <h1>{{email}}</h1>
   <div class="col-md-10">
-    <ul class="nav nav-pills">
-      <li>{{#linkTo "activities"}}Activities{{/linkTo}}</li>
-      <li>{{#linkTo "user.stats"}}Stats{{/linkTo}}</li>
-      <li>{{#linkTo "user.competitions"}}Competitions{{/linkTo}}</li>
-      <li>{{#linkTo "user.teamCompetitions"}}Team Competitions{{/linkTo}}</li>
-      <li>{{#linkTo "user.challenges"}}Challenges{{/linkTo}}</li>
-      <li>{{#linkTo "user.teamChallenges"}}Team Challenges{{/linkTo}}</li>
-      <li>{{#linkTo "user.edit"}}Settings{{/linkTo}}</li>
-    </ul>
+    <div class="row">
+      <div class="col-md-3">
+        <ul class="nav nav-pills nav-stacked">
+          {{controller.isCurrentUser}}
+          {{#if null}}
+          <li>{{#linkTo "activities"}}Activities{{/linkTo}}</li>
+          {{/if}}
+          <li>{{#linkTo "user.stats"}}Stats{{/linkTo}}</li>
+          <li>{{#linkTo "user.competitions"}}Competitions{{/linkTo}}</li>
+          <li>{{#linkTo "user.teamCompetitions"}}Team Competitions{{/linkTo}}</li>
+          <li>{{#linkTo "user.challenges"}}Challenges{{/linkTo}}</li>
+          <li>{{#linkTo "user.teamChallenges"}}Team Challenges{{/linkTo}}</li>
+          <li>{{#linkTo "user.edit"}}Settings{{/linkTo}}</li>
+        </ul>
+      </div>
 
-    {{outlet}}
+      <div class="col-md-9">
+        {{outlet}}
+      </div>
+    </div> 
   </div>
 
   <div class="col-md-2">

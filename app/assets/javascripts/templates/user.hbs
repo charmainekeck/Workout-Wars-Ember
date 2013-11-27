@@ -4,10 +4,7 @@
     <div class="row">
       <div class="col-md-3">
         <ul class="nav nav-pills nav-stacked">
-          {{controller.isCurrentUser}}
-          {{#if null}}
           <li>{{#linkTo "activities"}}Activities{{/linkTo}}</li>
-          {{/if}}
           <li>{{#linkTo "user.stats"}}Stats{{/linkTo}}</li>
           <li>{{#linkTo "user.competitions"}}Competitions{{/linkTo}}</li>
           <li>{{#linkTo "user.teamCompetitions"}}Team Competitions{{/linkTo}}</li>

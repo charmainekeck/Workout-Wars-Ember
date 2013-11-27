@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131125001454) do
+ActiveRecord::Schema.define(version: 20131127065634) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,16 @@ ActiveRecord::Schema.define(version: 20131125001454) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "c_exercises", force: true do |t|
+    t.integer  "exercise_id"
+    t.integer  "exerciseable_id"
+    t.string   "exerciseable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "c_exercises", ["exerciseable_id", "exerciseable_type"], name: "index_c_exercises_on_exerciseable_id_and_exerciseable_type", using: :btree
 
   create_table "challenges", force: true do |t|
     t.string   "name"

@@ -18,6 +18,8 @@
 //= require ember-data
 //= require_self
 //= require workout_wars
-WorkoutWars = Ember.Application.create();
+WorkoutWars = Ember.Application.create({
+    LOG_TRANSITIONS: true
+});
 
 //= require_tree .

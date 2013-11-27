@@ -2,7 +2,7 @@ class Api::V1::ActivitiesController < ApplicationController
   respond_to :json
 
   def index
-    respond_with Activity.all
+    respond_with Activity.all 
   end
 
   def show

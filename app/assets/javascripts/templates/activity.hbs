@@ -1,0 +1,20 @@
+<button class="btn btn-danger"{{action "delete"}}>Delete</button>
+<button class="btn btn-default"{{action "edit"}}>Edit</button>
+
+{{#if deleteMode}}
+<div class="confirm-box">
+  <h4>Are you sure?</h4>
+  <button class="btn btn-danger"{{action "confirmDelete"}}> Yes </button>
+  <button class="btn btn-default"{{action "cancelDelete"}}> No </button>
+</div>
+{{/if}}
+
+<h2>Activity</h2>
+
+<p>Reps: {{reps}}</p>
+<p>Distance: {{distance}}</p>
+<p>Duration: {{duration}}</p>
+<p>Calories: {{calories}}</p>
+<p>Weigth: {{weight}}</p>
+<br />
+{{outlet}}

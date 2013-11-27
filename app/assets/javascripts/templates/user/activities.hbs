@@ -1,7 +1,7 @@
 <h3>Activities</h3>
 
-{{controller}}
-
-{{#each controller}}
-  {{this}} 
-{{/each}}
+<ul class="nav nav-pills">
+  {{#each controller}}
+    <li>{{#linkTo "activity" this}}Activity{{/linkTo}}</li>
+  {{/each}}
+</ul>

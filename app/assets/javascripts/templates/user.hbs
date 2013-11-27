@@ -1,7 +1,11 @@
 <div class="row">
   <h1>{{email}}</h1>
-  <div class="col-md-10">
+  <div class="col-md-12">
     <div class="row">
+      <div class="col-md-9">
+        {{outlet}}
+      </div>
+      
       <div class="col-md-3">
         <ul class="nav nav-pills nav-stacked">
           <li>{{#linkTo "activities"}}Activities{{/linkTo}}</li>
@@ -13,18 +17,6 @@
           <li>{{#linkTo "user.edit"}}Settings{{/linkTo}}</li>
         </ul>
       </div>
-
-      <div class="col-md-9">
-        {{outlet}}
-      </div>
     </div> 
-  </div>
-
-  <div class="col-md-2">
-    <p>Name: {{name}}</p>
-    <p>Nickname: {{nickname}}</p>
-    <p>Age: {{age}}</p>
-    <p>Height: {{height}}</p>
-    <p>Weight: {{weight}}</p>
   </div>
 </div>

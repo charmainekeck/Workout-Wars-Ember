@@ -18,6 +18,7 @@
 //= require ember-data
 //= require_self
 //= require workout_wars
+//= require moment
 WorkoutWars = Ember.Application.create({
     LOG_TRANSITIONS: true
 });

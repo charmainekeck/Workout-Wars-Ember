@@ -1,9 +1,8 @@
 WorkoutWars.ExercisesController = Ember.ArrayController.extend
-  addExercise: (exercise) ->  
-   competition = @controllerFor('competition').get('model')
-    exercises = competition.get('exercises')
-    #exercises.createRecord
+  needs: ['competition']
 
-  transitionAfterSave:( ->
-    @transitionToRoute('exercise', @get('content')) if @get('content.id')
-  ).observes('content.id')
+  actions:    
+    addExercise: (exercise) ->  
+      competition = @get('controllers.competition').get('model')
+      exercises = competition.get('exercises')
+      console.log exercises

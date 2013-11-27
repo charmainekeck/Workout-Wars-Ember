@@ -2,7 +2,7 @@
 {{#linkTo "competitions.create" class="btn btn-lg btn-success btn-block"}}New Competition{{/linkTo}}
 <hr>
 <div class="row">
-  <div class="col-md-3">
+  <div class="col-md-2">
     <ul class="nav nav-pills nav-stacked">
     {{#each controller}}
       <li>{{#linkTo "competition" this}}{{name}}{{/linkTo}}</li>
@@ -11,7 +11,7 @@
     {{/each}}
     </ul>
   </div>
-  <div class="col-md-9">
+  <div class="col-md-10">
     {{outlet}}
   </div>
 </div>

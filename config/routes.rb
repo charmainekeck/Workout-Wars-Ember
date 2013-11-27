@@ -17,6 +17,7 @@ WorkoutWars::Application.routes.draw do
       resources :users
       resources :activities
       resources :exercises
+      resources :event_exercises
       devise_for :users
     end
   end

@@ -28,16 +28,6 @@ ActiveRecord::Schema.define(version: 20131127065634) do
     t.datetime "updated_at"
   end
 
-  create_table "c_exercises", force: true do |t|
-    t.integer  "exercise_id"
-    t.integer  "exerciseable_id"
-    t.string   "exerciseable_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "c_exercises", ["exerciseable_id", "exerciseable_type"], name: "index_c_exercises_on_exerciseable_id_and_exerciseable_type", using: :btree
-
   create_table "challenges", force: true do |t|
     t.string   "name"
     t.datetime "start_date"
@@ -73,6 +63,16 @@ ActiveRecord::Schema.define(version: 20131127065634) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "event_exercises", force: true do |t|
+    t.integer  "exercise_id"
+    t.integer  "exerciseable_id"
+    t.string   "exerciseable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "event_exercises", ["exerciseable_id", "exerciseable_type"], name: "index_event_exercises_on_exerciseable_id_and_exerciseable_type", using: :btree
 
   create_table "exercises", force: true do |t|
     t.string   "name"

@@ -1,4 +1,4 @@
 class Competition < ActiveRecord::Base
-  has_many :c_exercises, as: :exerciseable
-  has_many :exercises, through: :c_exercises
+  has_many :event_exercises, as: :exerciseable
+  has_many :exercises, through: :event_exercises
 end

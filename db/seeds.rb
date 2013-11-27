@@ -1,75 +1,21 @@
 puts "Seeding..."
 
-Competition.create(
-  name: "Competition Number 1",
-  start_date: Date.today,
-  end_date: Date.today+3.weeks,
-  max_participants: 10,
-  lower_level_restriction: 0,
-  upper_level_restriction: 10
-)
-
-Competition.create(
-  name: "Competition Number 2",
-  start_date: Date.today,
-  end_date: Date.today+3.weeks,
-  max_participants: 10,
-  lower_level_restriction: 0,
-  upper_level_restriction: 10
-)
-
-TeamCompetition.create(
-  name: "Team Competition Number 1",
-  start_date: Date.today,
-  end_date: Date.today+3.weeks,
-  max_participants: 10,
-  lower_level_restriction: 0,
-  upper_level_restriction: 10
-)
-
-TeamCompetition.create(
-  name: "Team Competition Number 2",
-  start_date: Date.today,
-  end_date: Date.today+3.weeks,
-  max_participants: 10,
-  lower_level_restriction: 0,
-  upper_level_restriction: 10
-)
-
-Challenge.create(
-  name: "Challenge Number 1",
-  start_date: Date.today,
-  end_date: Date.today+3.weeks,
-  max_participants: 10,
-  lower_level_restriction: 0,
-  upper_level_restriction: 10
-)
-
-Challenge.create(
-  name: "Challenge Number 2",
-  start_date: Date.today,
-  end_date: Date.today+3.weeks,
-  max_participants: 10,
-  lower_level_restriction: 0,
-  upper_level_restriction: 10
-)
-
-TeamChallenge.create(
-  name: "Team Challenge Number 1",
-  start_date: Date.today,
-  end_date: Date.today+3.weeks,
-  max_participants: 10,
-  lower_level_restriction: 0,
-  upper_level_restriction: 10
-)
-
-TeamChallenge.create(
-  name: "Team Challenge Number 2",
-  start_date: Date.today,
-  end_date: Date.today+3.weeks,
-  max_participants: 10,
-  lower_level_restriction: 0,
-  upper_level_restriction: 10
-)
+Exercise.destroy_all
+[
+  {name: 'Pushups',    reps: true, distance: false,  duration: false, weight: false, calories: false, xp_multiplier: 1},
+  {name: 'Pullups',    reps: true, distance: false,  duration: false, weight: false, calories: false, xp_multiplier: 4},
+  {name: 'Situps',     reps: true, distance: false,  duration: false, weight: false, calories: false, xp_multiplier: 0.75},
+  {name: 'Squats',     reps: true, distance: false,  duration: false, weight: false, calories: false, xp_multiplier: 1},
+  {name: 'Lunges',     reps: true, distance: false,  duration: false, weight: false, calories: false, xp_multiplier: 1},
+  {name: 'Burpees',    reps: true, distance: false,  duration: false, weight: false, calories: false, xp_multiplier: 3},
+  {name: 'Running',    reps: false, distance: true,  duration: false, weight: false, calories: false, xp_multiplier: 40},
+  {name: 'Biking',     reps: false, distance: true,  duration: false, weight: false, calories: false, xp_multiplier: 15},
+  {name: 'Swimming',   reps: false, distance: true,  duration: false, weight: false, calories: false, xp_multiplier: 300},
+  {name: 'Hiking',     reps: false, distance: true,  duration: false, weight: false, calories: false, xp_multiplier: 20}, 
+  {name: 'Aerobics',   reps: false, distance: false, duration: true , weight: false, calories: false, xp_multiplier: 1}, 
+  {name: 'Yoga',       reps: false, distance: false, duration: true , weight: false, calories: false, xp_multiplier: 5} 
+].each do |exercise|
+  Exercise.create!(exercise)
+end
 
 puts "Complete!"

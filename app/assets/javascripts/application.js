@@ -19,6 +19,8 @@
 //= require_self
 //= require workout_wars
 //= require moment
+//= require picker
+//= require picker.date
 WorkoutWars = Ember.Application.create({
     LOG_TRANSITIONS: true
 });

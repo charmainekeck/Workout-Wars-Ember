@@ -10,7 +10,7 @@ class CreateChallenges < ActiveRecord::Migration
       t.integer :win_condition_id
       t.integer :max_participants
       t.integer :difficulty_id
-      t.boolean :public, default: true
+      t.boolean :is_public
       t.boolean :active, default: true
       t.integer :creator_id
       t.integer :winner_id

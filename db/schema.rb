@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20131127065634) do
     t.string   "upper_level_restriction"
     t.integer  "win_condition_id"
     t.integer  "difficulty_id"
-    t.boolean  "public",                  default: true
+    t.boolean  "is_public"
     t.boolean  "active",                  default: true
     t.integer  "creator_id"
     t.integer  "winner_id"
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 20131127065634) do
     t.string   "upper_level_restriction"
     t.integer  "win_condition_id"
     t.integer  "difficulty_id"
-    t.boolean  "public",                  default: true
+    t.boolean  "is_public"
     t.boolean  "active",                  default: true
     t.integer  "creator_id"
     t.integer  "winner_id"
@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(version: 20131127065634) do
     t.string   "upper_level_restriction"
     t.integer  "win_condition_id"
     t.integer  "difficulty_id"
-    t.boolean  "public",                  default: true
+    t.boolean  "is_public"
     t.boolean  "active",                  default: true
     t.integer  "creator_id"
     t.integer  "winner_id"
@@ -114,7 +114,7 @@ ActiveRecord::Schema.define(version: 20131127065634) do
     t.string   "upper_level_restriction"
     t.integer  "win_condition_id"
     t.integer  "difficulty_id"
-    t.boolean  "public",                  default: true
+    t.boolean  "is_public"
     t.boolean  "active",                  default: true
     t.integer  "creator_id"
     t.integer  "winner_id"

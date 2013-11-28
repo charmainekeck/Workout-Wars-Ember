@@ -1,4 +1,7 @@
 WorkoutWars.CompetitionsCreateController = Ember.ObjectController.extend
+  isValid: (->
+    true
+  ).property('competition')
   actions:
     saveCompetition: ->  
       @get('store').commit()

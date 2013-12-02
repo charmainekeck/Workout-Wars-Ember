@@ -3,10 +3,13 @@
     <h4>Competition Settings</h4>
     <hr>
     <div class="row">
-      <div class="form-group">
+      <div {{bindAttr class=":form-group nameIsValid::has-error"}}>
         <label class= "col-sm-4 control-label">Name</label>
         <div class="col-sm-8">
-          {{input value=name classNames="form-control"}}
+          {{input value=nameInput classNames="form-control"}}
+          {{#unless nameIsValid}}
+            <p class="text-danger text-center">{{errors}}</p>
+          {{/unless}}
         </div>
       </div>
     </div>
@@ -15,7 +18,7 @@
       <div class="form-group">
         <label class= "col-sm-4 control-label">Start Date</label>
         <div class="col-sm-8">
-          {{input value=startDate classNames="form-control date-field"}}
+          {{#view WorkoutWars.DatePicker value="dick"}}{{/view}}
         </div>
       </div>
     </div>
@@ -24,7 +27,7 @@
       <div class="form-group">
         <label class= "col-sm-4 control-label">End Date</label>
         <div class="col-sm-8">
-          {{input value=endDate classNames="form-control date-field"}}
+          {{view WorkoutWars.DatePicker valueBinding="content.endDate"}}
         </div>
       </div>
     </div>
@@ -60,16 +63,7 @@
       <div class="form-group">
         <label class= "col-sm-4 control-label">Public</label>
         <div class="col-sm-8">
-          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="form-group">
-        <label class= "col-sm-4 control-label">Private</label>
-        <div class="col-sm-8">
-          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+          {{input type="checkbox" value=isPublic}}
         </div>
       </div>
     </div>
@@ -85,9 +79,5 @@
       </div>
     </div>
 
-  </div>
-
-  <div class="col-md-2">
-    {{render "exercises"}}
   </div>
 </div>

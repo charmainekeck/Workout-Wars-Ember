@@ -16,4 +16,7 @@
  *= require_tree .
  */
 
+.active{
+  color: #78cc78;
+}
 

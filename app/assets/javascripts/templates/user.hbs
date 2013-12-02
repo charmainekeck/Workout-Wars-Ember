@@ -14,7 +14,9 @@
           <li>{{#linkTo "user.teamCompetitions"}}Team Competitions{{/linkTo}}</li>
           <li>{{#linkTo "user.challenges"}}Challenges{{/linkTo}}</li>
           <li>{{#linkTo "user.teamChallenges"}}Team Challenges{{/linkTo}}</li>
+          {{#if isCurrentUser}}
           <li>{{#linkTo "user.edit"}}Settings{{/linkTo}}</li>
+          {{/if}}
         </ul>
       </div>
     </div> 

@@ -6,9 +6,9 @@ WorkoutWars.CompetitionController = Ember.ObjectController.extend
   ).property('competition')
 
   actions:
-    delete: ->
+    activateDelete: ->
       @toggleProperty('deleteMode')
-
+    
     cancelDelete: ->
       @set('deleteMode', false)  
       

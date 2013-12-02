@@ -5,7 +5,9 @@
   <div class="col-md-2">
     <ul class="nav nav-pills nav-stacked">
     {{#each controller}}
+      {{#unless isDirty}}
       <li>{{#linkTo "competition" this}}{{name}}{{/linkTo}}</li>
+      {{/unless}}
     {{else}}
       <li>There are no competitions.</li>
     {{/each}}
@@ -16,83 +18,4 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-10">
-    <h4>Competition Settings</h4>
-    <hr>
-    <div class="row">
-      <div class="form-group">
-        <label class= "col-sm-4 control-label">Name</label>
-        <div class="col-sm-8">
-          {{input value=name classNames="form-control"}}
-        </div>
-      </div>
-    </div>
 
-    <div class="row">
-      <div class="form-group">
-        <label class= "col-sm-4 control-label">Start Date</label>
-        <div class="col-sm-8">
-          {{#view WorkoutWars.DatePicker value="dick"}}{{/view}}
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="form-group">
-        <label class= "col-sm-4 control-label">End Date</label>
-        <div class="col-sm-8">
-          {{view WorkoutWars.DatePicker valueBinding="content.endDate"}}
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="form-group">
-        <label class= "col-sm-4 control-label">Lower Level Restriction</label>
-        <div class="col-sm-8">
-          {{input value=lowerLevelRestriction classNames="form-control"}}
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="form-group">
-        <label class= "col-sm-4 control-label">Upper Level Restriction</label>
-        <div class="col-sm-8">
-          {{input value=upperLevelRestriction classNames="form-control"}}
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="form-group">
-        <label class= "col-sm-4 control-label">Max Participants</label>
-        <div class="col-sm-8">
-          {{input value=maxParticipants classNames="form-control"}}
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="form-group">
-        <label class= "col-sm-4 control-label">Public</label>
-        <div class="col-sm-8">
-          {{input type="checkbox" value=isPublic}}
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="form-group">
-        <div class="col-sm-offset-4 col-sm-8">
-          <input {{action "addCompetition"}} type="submit" class="btn btn-lg btn-block btn-success" value="Save" />
-        </div>
-        <div class="col-sm-offset-4 col-sm-8">
-          <input {{action "cancelSave"}} type="submit" class="btn btn-lg btn-block btn-info" value="Cancel" />
-        </div>        
-      </div>
-    </div>
-
-  </div>
-</div>

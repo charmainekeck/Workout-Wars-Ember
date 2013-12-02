@@ -1,12 +1,9 @@
-WorkoutWars.UserController = Ember.ObjectController.extend
+WorkoutWars.ActivitiesController = Ember.ArrayController.extend
   needs: ['application']
 
   isCurrentUser: (->
     currentUser = @get('controllers.application.currentUser')
     user = @get('content')
+    console.log user
     user == currentUser
-  ).property('content')  
-  
-  actions:
-    edit: ->
-      @transitionToRoute "user.edit"
+  ).property('content', )  

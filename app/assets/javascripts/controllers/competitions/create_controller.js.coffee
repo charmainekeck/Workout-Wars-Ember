@@ -1,11 +1,16 @@
 WorkoutWars.CompetitionsCreateController = Ember.Controller.extend
   isValid: (->
-    competition = @get('content')
-    if competition
-      competition.get('isValid')
-    else
-      true
-  ).property('content.isValid')
+    msg = ""
+    isValid = true
+    value = @get("name")
+    console.log value
+    if /^\s+$/.test(value)
+      isValid = false
+      msg['name'].push "Field can't be empty"
+
+    @set("errors", msg)
+    isValid
+  ).property('name')
 
   content: null
   name: ""

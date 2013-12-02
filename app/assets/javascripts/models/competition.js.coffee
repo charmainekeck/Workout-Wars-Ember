@@ -8,17 +8,5 @@ WorkoutWars.Competition = DS.Model.extend
   upperLevelRestriction: DS.attr('string')
 
   save: ->
-    @get('store').commit() if @validate()
+    @get('store').commit()
 
-  validate: ->
-    msg = { name: []}
-    isValid = true
-
-    value = @get("name")
-    if /^\s+$/.test(value)
-      isValid = false
-      msg['name'].push "Field can't be empty"
-
-    @set("errors", msg)
-    @get('isValid', isValid)
-    isValid

@@ -1,9 +1,9 @@
 WorkoutWars.ActivitiesController = Ember.ArrayController.extend
-  needs: ['application']
+  needs: ['application', 'user']
 
   isCurrentUser: (->
     currentUser = @get('controllers.application.currentUser')
-    user = @get('content')
+    user = @get('controllers.user.content')
     console.log user
     user == currentUser
   ).property('content', )  

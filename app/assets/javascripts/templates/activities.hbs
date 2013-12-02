@@ -1,6 +1,7 @@
 <h1>Activities</h1>
-{{controller}}
-{{#linkTo "activities.create" class="btn btn-lg btn-success btn-block"}}New Activity{{/linkTo}}
+{{#if isCurrentUser}}
+  {{#linkTo "activities.create" class="btn btn-lg btn-success btn-block"}}New Activity{{/linkTo}}
+{{/if}}
 <hr>
 <div class="row">
   <div class="col-md-3">

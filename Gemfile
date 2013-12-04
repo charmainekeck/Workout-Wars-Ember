@@ -10,6 +10,8 @@ gem 'jquery-ui-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem "ember-rails"
+gem 'ember-source'
+gem 'ember-data-source'
 gem "foreman"
 gem 'devise', '~> 3.0.2'
 gem 'cancan'

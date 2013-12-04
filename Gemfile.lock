@@ -147,7 +147,9 @@ DEPENDENCIES
   cancan
   coffee-rails (~> 4.0.0)
   devise (~> 3.0.2)
+  ember-data-source
   ember-rails
+  ember-source
   foreman
   jbuilder (~> 1.2)
   jquery-rails

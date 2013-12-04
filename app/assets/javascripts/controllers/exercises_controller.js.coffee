@@ -1,8 +1,2 @@
-WorkoutWars.ExercisesController = Ember.ArrayController.extend
-  needs: ['competition']
+WorkoutWars.ExercisesController = Ember.ArrayController.extend()
 
-  actions:    
-    addExercise: (exercise) ->  
-      competition = @get('controllers.competition').get('model')
-      exercises = competition.get('exercises')
-      console.log exercises

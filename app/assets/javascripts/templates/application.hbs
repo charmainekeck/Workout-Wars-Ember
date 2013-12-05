@@ -12,7 +12,7 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li>{{#linkTo "user" currentUser}}Profile{{/linkTo}}</li>
+        <li>{{#linkTo "user" currentUserId}}Profile{{/linkTo}}</li>
         <li>{{#linkTo "users"}}Users{{/linkTo}}</li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Competitions <b class="caret"></b></a>
@@ -31,7 +31,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>{{#linkTo "contact"}}Contact us{{/linkTo}}</li>
-        <li>{{#linkTo "user.edit" currentUser}}Settings{{/linkTo}}</li>
+        <li>{{#linkTo "user.edit" currentUserId}}Settings{{/linkTo}}</li>
         <li><a href="/users/sign_out" data-method="delete">Sign out</a></li>
       </ul>
     </div><!--/.nav-collapse -->

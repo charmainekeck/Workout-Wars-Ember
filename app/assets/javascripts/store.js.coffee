@@ -9,3 +9,4 @@ inflector.irregular("activity", "activities")
 # )
 
 WorkoutWars.ApplicationAdapter = DS.RESTAdapter()
+WorkoutWars.ApplicationSerializer = DS.ActiveModelSerializer.extend()

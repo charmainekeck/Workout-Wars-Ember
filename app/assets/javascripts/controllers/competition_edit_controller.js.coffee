@@ -9,8 +9,9 @@ WorkoutWars.CompetitionEditController = Ember.ObjectController.extend
         exerciseableId: competition.id
         exerciseableType: "Competition"
       }
- 
-      eventExercise = WorkoutWars.EventExercise.createRecord(eventExercise)
+
+      console.log competition.get('eventExercises')
+      eventExercise = competition.get('eventExercises').createRecord(eventExercise)
       eventExercise.save()
       @get('store').commit()
 

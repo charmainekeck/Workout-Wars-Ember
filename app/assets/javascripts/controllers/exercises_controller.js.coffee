@@ -1,2 +1,2 @@
-WorkoutWars.ExercisesController = Ember.ArrayController.extend()
-
+WorkoutWars.ExercisesController = Ember.ArrayController.extend
+  sortProperties: ['name']

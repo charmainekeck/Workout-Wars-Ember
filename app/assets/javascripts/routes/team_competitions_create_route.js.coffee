@@ -1,6 +1,6 @@
 WorkoutWars.TeamCompetitionsCreateRoute = Ember.Route.extend
   model: ->
-    WorkoutWars.TeamCompetition.createRecord()
+    @store.createRecord('teamCompetition')
 
   renderTemplate: ->
     @render "teamCompetition.edit",

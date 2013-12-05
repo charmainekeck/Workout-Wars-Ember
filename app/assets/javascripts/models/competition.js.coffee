@@ -1,6 +1,6 @@
 WorkoutWars.Competition = DS.Model.extend
-  eventExercises: DS.hasMany('WorkoutWars.EventExercise', { embedded: true }) 
-  exercises: DS.hasMany('WorkoutWars.Exercise', { embedded: true }) 
+  eventExercises: DS.hasMany('eventExercise', { embedded: true }) 
+  exercises: DS.hasMany('exercise', { embedded: true }) 
   name: DS.attr('string')
   startDate: DS.attr('date')
   endDate: DS.attr('date')

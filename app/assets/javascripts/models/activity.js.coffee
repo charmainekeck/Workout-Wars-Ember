@@ -1,6 +1,6 @@
 WorkoutWars.Activity = DS.Model.extend 
-  user: DS.belongsTo('WorkoutWars.User') 
-  exercise: DS.belongsTo('WorkoutWars.Exercise') 
+  user: DS.belongsTo('user') 
+  exercise: DS.belongsTo('exercise') 
   reps: DS.attr('number')
   distance: DS.attr('number')
   duration: DS.attr('number')

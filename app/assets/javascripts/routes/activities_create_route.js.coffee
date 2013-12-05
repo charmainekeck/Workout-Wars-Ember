@@ -1,6 +1,6 @@
 WorkoutWars.ActivitiesCreateRoute = Ember.Route.extend
   model: ->
-    WorkoutWars.Activity.createRecord()
+    @store.createRecord('activity')
 
   renderTemplate: ->
     @render "activity.edit",
